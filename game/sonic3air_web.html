@@ -77,29 +77,6 @@ input[type="file"] {display: none;}
 	cursor: default;
 	background-color: rgba(0,0,0,50%);
 }
-.output-button,
-.output-button-2 {
-  box-sizing: border-box;
-  position: static;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: min(42vw, 180px);
-  min-height: 56px;
-  height: auto;
-  margin: 8px;
-  padding: 10px;
-  border: 1px solid #777;
-  border-radius: 8px;
-  background: #222;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.3;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  text-align: center;
-}
 </style>
 <script src="browserfs.min.js"></script>
 <script>
@@ -370,22 +347,9 @@ function hideButtonUI(){
     };
     fr.readAsArrayBuffer(file);
 }
-	// functions for the custom buttons that make it open other websites/local files
-      function togglegithub() {
-        window.location.href = "https://github.com/burnedpopcorn/sonic3air-webport";
-}
-      function togglegamedownload() {
-        window.location.href = "/Sonic_Knuckles_wSonic3.bin";
-}
 </script>
 </head>
 <body>
-      <button id="ModdedButton" class="output-button" onclick="togglegithub()">
-        Web Build Github Repo
-      </button>
-      <button id="ModdedButton2" class="output-button-2" onclick="togglegamedownload()">
-        ROM Download
-      </button>
 <div id="startup"><h2>Loading...</h2></div>
 <div class="spinner pageUI hidden" id=spinner></div>
 <div class="emscripten pageUI hidden" id=status>Downloading...</div>
@@ -432,9 +396,7 @@ function hideButtonUI(){
 var statusElement = document.getElementById("status"),
     progressElement = document.getElementById("progress"),
     spinnerElement = document.getElementById("spinner"),
-    ModdedElement = document.getElementById("ModdedCode"),
-    ModdedButton = document.getElementById("ModdedButton");
-
+    ModdedElement = document.getElementById("ModdedCode");
 var Module = {
     preRun: function(){
 		onPageLoaded();
