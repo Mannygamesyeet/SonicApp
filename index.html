@@ -3,36 +3,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Sonic 3 A.I.R.">
   <meta name="theme-color" content="#000000">
   <link rel="apple-touch-icon" sizes="180x180" href="/SonicApp/icon.png">
-  <link rel="manifest" href="/SonicApp/manifest.json">
   <title>Sonic 3 A.I.R.</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-    }
-    body {
-      overflow: hidden;
-    }
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  </style>
+  <script>
+    window.location.replace("/SonicApp/game/sonic3air_web.html");
+  </script>
 </head>
-<body>
-  <iframe
-    src="/SonicApp/game/sonic3air_web.html"
-    allowfullscreen>
-  </iframe>
+<body style="margin:0;background:#000">
+  <p style="color:white;text-align:center">
+    Opening Sonic 3 A.I.R.…
+    <a href="/SonicApp/game/sonic3air_web.html">Tap here if it doesn't open</a>
+  </p>
 </body>
 </html>
